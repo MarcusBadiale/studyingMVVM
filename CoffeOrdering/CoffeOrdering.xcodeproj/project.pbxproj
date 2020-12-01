@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		AB7523AC2576BAA700806053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7523AB2576BAA700806053 /* AppDelegate.swift */; };
 		AB7523AE2576BAA700806053 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7523AD2576BAA700806053 /* SceneDelegate.swift */; };
-		AB7523B02576BAA700806053 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7523AF2576BAA700806053 /* ViewController.swift */; };
 		AB7523B32576BAA700806053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7523B12576BAA700806053 /* Main.storyboard */; };
 		AB7523B52576BAAA00806053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB7523B42576BAAA00806053 /* Assets.xcassets */; };
 		AB7523B82576BAAA00806053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7523B62576BAAA00806053 /* LaunchScreen.storyboard */; };
 		AB7523C32576BAAA00806053 /* CoffeOrderingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7523C22576BAAA00806053 /* CoffeOrderingTests.swift */; };
 		AB7523CE2576BAAA00806053 /* CoffeOrderingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7523CD2576BAAA00806053 /* CoffeOrderingUITests.swift */; };
+		AB7523E62576BC2700806053 /* OdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7523E52576BC2700806053 /* OdersTableViewController.swift */; };
+		AB7523EB2576BC5600806053 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7523EA2576BC5500806053 /* AddOrderViewController.swift */; };
+		AB7523F12576C12C00806053 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7523F02576C12C00806053 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		AB7523A82576BAA700806053 /* CoffeOrdering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeOrdering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7523AB2576BAA700806053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB7523AD2576BAA700806053 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB7523AF2576BAA700806053 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB7523B22576BAA700806053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB7523B42576BAAA00806053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB7523B72576BAAA00806053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		AB7523C92576BAAA00806053 /* CoffeOrderingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeOrderingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7523CD2576BAAA00806053 /* CoffeOrderingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeOrderingUITests.swift; sourceTree = "<group>"; };
 		AB7523CF2576BAAA00806053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB7523E52576BC2700806053 /* OdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdersTableViewController.swift; sourceTree = "<group>"; };
+		AB7523EA2576BC5500806053 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
+		AB7523F02576C12C00806053 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +103,10 @@
 		AB7523AA2576BAA700806053 /* CoffeOrdering */ = {
 			isa = PBXGroup;
 			children = (
-				AB7523AB2576BAA700806053 /* AppDelegate.swift */,
-				AB7523AD2576BAA700806053 /* SceneDelegate.swift */,
-				AB7523AF2576BAA700806053 /* ViewController.swift */,
+				AB7523EF2576C12200806053 /* Services */,
+				AB7523E12576BB5500806053 /* Controllers */,
+				AB7523F82576C13000806053 /* Support */,
 				AB7523B12576BAA700806053 /* Main.storyboard */,
-				AB7523B42576BAAA00806053 /* Assets.xcassets */,
 				AB7523B62576BAAA00806053 /* LaunchScreen.storyboard */,
 				AB7523B92576BAAA00806053 /* Info.plist */,
 			);
@@ -126,6 +129,33 @@
 				AB7523CF2576BAAA00806053 /* Info.plist */,
 			);
 			path = CoffeOrderingUITests;
+			sourceTree = "<group>";
+		};
+		AB7523E12576BB5500806053 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB7523E52576BC2700806053 /* OdersTableViewController.swift */,
+				AB7523EA2576BC5500806053 /* AddOrderViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AB7523EF2576C12200806053 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AB7523F02576C12C00806053 /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AB7523F82576C13000806053 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				AB7523B42576BAAA00806053 /* Assets.xcassets */,
+				AB7523AB2576BAA700806053 /* AppDelegate.swift */,
+				AB7523AD2576BAA700806053 /* SceneDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB7523B02576BAA700806053 /* ViewController.swift in Sources */,
+				AB7523E62576BC2700806053 /* OdersTableViewController.swift in Sources */,
 				AB7523AC2576BAA700806053 /* AppDelegate.swift in Sources */,
 				AB7523AE2576BAA700806053 /* SceneDelegate.swift in Sources */,
+				AB7523F12576C12C00806053 /* WebService.swift in Sources */,
+				AB7523EB2576BC5600806053 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
