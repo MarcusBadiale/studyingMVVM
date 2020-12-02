@@ -17,6 +17,7 @@
 		AB7523E62576BC2700806053 /* OdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7523E52576BC2700806053 /* OdersTableViewController.swift */; };
 		AB7523EB2576BC5600806053 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7523EA2576BC5500806053 /* AddOrderViewController.swift */; };
 		AB7523F12576C12C00806053 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7523F02576C12C00806053 /* WebService.swift */; };
+		ABF8D9902576C3AC00F2B907 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF8D98F2576C3AC00F2B907 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		AB7523E52576BC2700806053 /* OdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdersTableViewController.swift; sourceTree = "<group>"; };
 		AB7523EA2576BC5500806053 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
 		AB7523F02576C12C00806053 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		ABF8D98F2576C3AC00F2B907 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		AB7523AA2576BAA700806053 /* CoffeOrdering */ = {
 			isa = PBXGroup;
 			children = (
+				ABF8D98E2576C39E00F2B907 /* Models */,
 				AB7523EF2576C12200806053 /* Services */,
 				AB7523E12576BB5500806053 /* Controllers */,
 				AB7523F82576C13000806053 /* Support */,
@@ -156,6 +159,14 @@
 				AB7523AD2576BAA700806053 /* SceneDelegate.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		ABF8D98E2576C39E00F2B907 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ABF8D98F2576C3AC00F2B907 /* Order.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF8D9902576C3AC00F2B907 /* Order.swift in Sources */,
 				AB7523E62576BC2700806053 /* OdersTableViewController.swift in Sources */,
 				AB7523AC2576BAA700806053 /* AppDelegate.swift in Sources */,
 				AB7523AE2576BAA700806053 /* SceneDelegate.swift in Sources */,
