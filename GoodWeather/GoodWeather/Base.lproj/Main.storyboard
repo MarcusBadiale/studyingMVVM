@@ -89,7 +89,8 @@
                                     <constraint firstAttribute="width" constant="80" id="06k-Jr-GF8"/>
                                     <constraint firstAttribute="height" constant="40" id="vnA-xn-fH3"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveCityAction:" destination="NOl-o9-d3v" eventType="touchUpInside" id="QCC-k7-mpJ"/>
                                 </connections>

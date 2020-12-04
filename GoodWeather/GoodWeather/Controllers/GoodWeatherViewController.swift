@@ -39,5 +39,11 @@ extension GoodWeatherViewController {
         
         return cell
     }
+}
+
+extension GoodWeatherViewController: AddWeatherDelegate {
     
+    func addWeatherDidSave(viewModel: WeatherViewModel) {
+        <#code#>
+    }
 }
