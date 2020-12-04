@@ -23,6 +23,17 @@ class GoodWeatherViewController: UITableViewController {
     //MARK: - Auxiliares Funcitons
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+            case "goToAddCity":
+                prepareSegueForAddCity(segue: segue)
+            case "goToSettings":
+                prepareSegueForSettings(segue: segue)
+            default:
+                break
+        }
+    }
+
+    private func prepareSegueForAddCity(segue: UIStoryboardSegue) {
         
         guard let navController = segue.destination as? UINavigationController else {
             fatalError("NavigationController not found")
@@ -31,8 +42,18 @@ class GoodWeatherViewController: UITableViewController {
         guard let nextVc = navController.children.first as? AddCityViewController else {
             fatalError("ViewController not found")
         }
-        
         nextVc.delegate = self
+    }
+    
+    private func prepareSegueForSettings(segue: UIStoryboardSegue) {
+        
+        guard let navController = segue.destination as? UINavigationController else {
+            fatalError("NavigationController not found")
+        }
+        
+        guard let nextVc = navController.children.first as? SettingsTableViewController else {
+            fatalError("ViewController not found")
+        }
     }
 }
 

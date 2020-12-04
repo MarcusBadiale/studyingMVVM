@@ -58,10 +58,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="GoodWeather" id="2ZJ-41-IHP">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" style="plain" id="F5K-mJ-e1F"/>
+                        <barButtonItem key="leftBarButtonItem" image="gearshape" catalog="system" style="plain" id="F5K-mJ-e1F">
+                            <connections>
+                                <segue destination="FAr-m0-Y57" kind="presentation" identifier="goToSettings" modalPresentationStyle="fullScreen" id="6rF-zJ-AKo"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="l8A-9c-lsP">
                             <connections>
-                                <segue destination="qf2-ga-Axm" kind="presentation" modalPresentationStyle="fullScreen" id="FjX-22-cwM"/>
+                                <segue destination="qf2-ga-Axm" kind="presentation" identifier="goToAddCity" modalPresentationStyle="fullScreen" id="FjX-22-cwM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -139,6 +143,46 @@
             </objects>
             <point key="canvasLocation" x="-43.478260869565219" y="59.598214285714285"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="w6P-Rh-cJd">
+            <objects>
+                <tableViewController id="Dv3-Ib-vho" customClass="SettingsTableViewController" customModule="GoodWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e18-xq-XZ2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell" id="B4j-vv-gSn">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B4j-vv-gSn" id="hAP-Ct-gdd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Dv3-Ib-vho" id="mUe-jE-lQw"/>
+                            <outlet property="delegate" destination="Dv3-Ib-vho" id="MQN-cc-Ao6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="P22-6P-KRQ">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="Gow-c0-x32">
+                            <connections>
+                                <action selector="closeView:" destination="Dv3-Ib-vho" id="vcC-78-aPU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TPK-Sn-jyD">
+                            <connections>
+                                <action selector="saveSettings:" destination="Dv3-Ib-vho" id="6K0-Aq-Kse"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Q5-Nm-Szo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2555.072463768116" y="-654.24107142857144"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="GwA-Lw-cd9">
             <objects>
@@ -155,10 +199,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eR1-ws-RVF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1798.5507246376812" y="59.598214285714285"/>
+            <point key="canvasLocation" x="1797" y="60"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="L6L-7E-TnG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FAr-m0-Y57" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TDx-gG-BDQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dv3-Ib-vho" kind="relationship" relationship="rootViewController" id="LX7-W9-AZ0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9V-2i-lGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644.9275362318842" y="-654.24107142857144"/>
         </scene>
     </scenes>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
