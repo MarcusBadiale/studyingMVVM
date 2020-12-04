@@ -19,6 +19,7 @@
 		AB148E15257928CF00C35ABF /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148E14257928CF00C35ABF /* WeatherCell.swift */; };
 		AB148E1D257A61F900C35ABF /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148E1C257A61F900C35ABF /* WebService.swift */; };
 		AB148E22257A732200C35ABF /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148E21257A732200C35ABF /* WeatherListViewModel.swift */; };
+		AB148E28257A845D00C35ABF /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148E27257A845D00C35ABF /* Double+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		AB148E14257928CF00C35ABF /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		AB148E1C257A61F900C35ABF /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		AB148E21257A732200C35ABF /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
+		AB148E27257A845D00C35ABF /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		AB148DCB257908A400C35ABF /* GoodWeather */ = {
 			isa = PBXGroup;
 			children = (
+				AB148E26257A845000C35ABF /* Extension */,
 				AB148E01257908D200C35ABF /* Service */,
 				AB148E00257908C700C35ABF /* ViewModels */,
 				AB148E13257928BF00C35ABF /* CustomCells */,
@@ -178,6 +181,14 @@
 				AB148E14257928CF00C35ABF /* WeatherCell.swift */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		AB148E26257A845000C35ABF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AB148E27257A845D00C35ABF /* Double+Extensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB148E28257A845D00C35ABF /* Double+Extensions.swift in Sources */,
 				AB148E1D257A61F900C35ABF /* WebService.swift in Sources */,
 				AB148DCD257908A400C35ABF /* AppDelegate.swift in Sources */,
 				AB148E07257911E900C35ABF /* GoodWeatherViewController.swift in Sources */,

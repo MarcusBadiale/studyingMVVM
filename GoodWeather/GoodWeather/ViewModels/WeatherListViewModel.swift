@@ -10,6 +10,18 @@ import Foundation
 struct WeatherListViewModel {
     
     private var weatherViewModels = [WeatherViewModel]()
+    
+    mutating func addWeather(_ vm: WeatherViewModel) {
+        self.weatherViewModels.append(vm)
+    }
+    
+    func getNumberOfRows() -> Int {
+        return self.weatherViewModels.count
+    }
+    
+    func getWeather(at index: Int) -> WeatherViewModel {
+        return self.weatherViewModels[index]
+    }
 }
 
 /// Weather Cell

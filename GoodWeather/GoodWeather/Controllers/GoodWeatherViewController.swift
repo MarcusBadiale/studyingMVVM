@@ -10,10 +10,29 @@ import UIKit
 
 class GoodWeatherViewController: UITableViewController {
     
+    //MARK: - Variables
+    var weatherListViewModel = WeatherListViewModel()
+    
+    //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    //MARK: - Auxiliares Funcitons
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let navController = segue.destination as? UINavigationController else {
+            fatalError("NavigationController not found")
+        }
+        
+        guard let nextVc = navController.children.first as? AddCityViewController else {
+            fatalError("ViewController not found")
+        }
+        
+        nextVc.delegate = self
     }
 }
 
@@ -24,26 +43,29 @@ extension GoodWeatherViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return self.weatherListViewModel.getNumberOfRows()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as! WeatherCell
         
-        cell.setCell(cityName: "Denver", temperature: "50°")
+        let currentWeatherCell = weatherListViewModel.getWeather(at: indexPath.row)
+        cell.setCell(cityName: currentWeatherCell.name, temperature: currentWeatherCell.currentTemperature.temperature)
         
         return cell
     }
 }
 
+//MARK: - Protocol
 extension GoodWeatherViewController: AddWeatherDelegate {
     
     func addWeatherDidSave(viewModel: WeatherViewModel) {
-        <#code#>
+        
+        self.weatherListViewModel.addWeather(viewModel)
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }

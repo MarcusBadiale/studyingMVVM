@@ -13,9 +13,9 @@ class WeatherCell: UITableViewCell {
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     
-    func setCell(cityName: String, temperature:   String) {
+    func setCell(cityName: String, temperature: Double) {
         
         self.cityNameLabel.text = cityName
-        self.temperatureLabel.text = temperature
+        self.temperatureLabel.text = temperature.formatAsDegree
     }
 }
