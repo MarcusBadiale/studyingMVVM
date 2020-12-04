@@ -20,6 +20,7 @@
 		AB148E1D257A61F900C35ABF /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148E1C257A61F900C35ABF /* WebService.swift */; };
 		AB148E22257A732200C35ABF /* WeatherListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148E21257A732200C35ABF /* WeatherListViewModel.swift */; };
 		AB148E28257A845D00C35ABF /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148E27257A845D00C35ABF /* Double+Extensions.swift */; };
+		AB148E31257A8F3B00C35ABF /* MyAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB148E30257A8F3B00C35ABF /* MyAPIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		AB148E1C257A61F900C35ABF /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		AB148E21257A732200C35ABF /* WeatherListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListViewModel.swift; sourceTree = "<group>"; };
 		AB148E27257A845D00C35ABF /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		AB148E30257A8F3B00C35ABF /* MyAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPIKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				AB148E1C257A61F900C35ABF /* WebService.swift */,
+				AB148E30257A8F3B00C35ABF /* MyAPIKey.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				AB148E1D257A61F900C35ABF /* WebService.swift in Sources */,
 				AB148DCD257908A400C35ABF /* AppDelegate.swift in Sources */,
 				AB148E07257911E900C35ABF /* GoodWeatherViewController.swift in Sources */,
+				AB148E31257A8F3B00C35ABF /* MyAPIKey.swift in Sources */,
 				AB148E22257A732200C35ABF /* WeatherListViewModel.swift in Sources */,
 				AB148E15257928CF00C35ABF /* WeatherCell.swift in Sources */,
 				AB148DCF257908A400C35ABF /* SceneDelegate.swift in Sources */,
